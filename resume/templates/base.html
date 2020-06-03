@@ -1,0 +1,80 @@
+<html lang="en">
+    <head>
+        {% block meta %}
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="">
+            <meta name="author" content="">
+        {% endblock %}
+
+        <title> {% block title %} Vinay Gopalan, Software Developer {% endblock title %} </title>
+
+
+        <!-- LOAD CSS FILES -->
+        {% load static %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{% static "css/base.css" %}">
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        {% endblock stylesheets %}
+    </head>
+
+    <body>
+        <div id="page-container">
+            <nav id="navbar">
+                <a class="logo__link" href="/">
+                    <div class="logo">
+                        <span class="dot"></span>
+                        <span class="logo__name"> Vinay Gopalan </span>
+                        <span class="logo__text">/ Software Developer</span>
+                    </div>
+                </a>
+                <div class="nav__links-wrapper">
+                    <ul class="nav__links">
+                        <li class="nav__links__item {{ about }}"> <a href="/"> About </a> </li>
+                        <li class="nav__links__item {{ resume }}"> <a href="/resume"> R&eacute;sum&eacute; </a></li>
+                        <li class="nav__links__item {{ projects }}"> <a href="/projects"> Projects </a></li>
+                        <li class="nav__links__item {{ contact }}"> <a href="/contact"> Contact </a></li>
+                    </ul>
+                </div>  
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+
+            <div id="content-wrap">
+                {% block content %}{% endblock content %}
+                <div class="push"></div>
+            </div>
+
+            <div id="footer">
+                <div class="footer__copyright">
+                    &copy; 2020 by Vinay Gopalan
+                </div>
+                <div>
+                    <ul class="footer__links">
+                        <li> 
+                            <span class="footer__item__upper"> Call </span> 
+                            <span class="footer__item__lower"> (503)-327-6819 </span>
+                        </li>
+                        <li> 
+                            <span class="footer__item__upper"> Connect </span> 
+                            <span class="footer__item__lower"> 
+                                <a href="https://www.facebook.com/vinay.gopalan"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.linkedin.com/in/vinay-gopalan-2ba09b129/"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/gopalanvinay/"><i class="fa fa-instagram"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% block javascripts %}
+            {% load static %}
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+            <script type="text/javascript" src="{% static "js/base.js" %}"></script>
+        {% endblock javascripts %}
+    </body>
+</html>

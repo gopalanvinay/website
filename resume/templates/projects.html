@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block stylesheets %}
+    {%load static %}
+    <link rel="stylesheet" href="{% static "css/projects.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+{% endblock stylesheets %}
+
+{% block content %}
+    <div class="scene_element scene_element--fadeinup">
+        <div class="project__banner">
+            <span class="dot dot-padding"></span>
+            <span class="project__header"> Projects </span>
+        </div>
+        
+        <div class="project-card slow-shadow">
+            <div class="project-card__info">
+                <span class="project-card__info__heading"><a href="https://www.github.com/gopalanvinay/thesis-vinay-gopalan"> Senior Year Thesis </a></span>
+                <span class="project-card__underline"> </span>
+                <span class="project-card__body"> As part of my senior thesis at Reed College, I designed a neural network that performs the task of sentiment analysis on Hinglish (code-mixed Hindi-English) tweets. My advisor and I submitted this model for Task 9 ( <a class="custom_link" href="/download?filename=semeval" target="_blank">here's the paper!</a>) of the <a class="custom_link" href="http://alt.qcri.org/semeval2020/">SemEval 2020 competition</a>, and we placed 4th out of 62 teams. </span>
+            </div>
+            <div>
+                {% load static %}
+                <img class="project-card__image" src="{% static "images/sentiment_analysis.png" %}">
+            </div>
+        </div>
+
+        <div class="project-card slow-shadow">
+            <div class="project-card__info">
+                <span class="project-card__info__heading"><a href="https://github.com/gopalanvinay/web-caching-system"> Web-Caching System </a></span>
+                <span class="project-card__underline"> </span>
+                <span class="project-card__body"> For a project in my Systems class, my partner and I implemented a web-cache with a RESTful API that allowed multiple clients over the multithreaded server to access the cache. The design of our cache was based on Facebook's Memcache, and required a lot of test driven design strategies. This was my first introduction to <a class="custom_link" href="https://www.boost.org/">Boost.Beast</a>, a C++ module that simplifies building client-server applications. </span>
+            </div>
+            <div>
+                {% load static %}
+                <img class="project-card__image" src="{% static "images/cache.jpg" %}">
+            </div>
+        </div>
+
+        <div class="project-card slow-shadow">
+            <div class="project-card__info">
+                <span class="project-card__info__heading"><a href="https://www.github.com/gopalanvinay/branchio"> Branch.io Chat Platform </a></span>
+                <span class="project-card__underline"> </span>
+                <span class="project-card__body"> I am a big believer in accessibility on the internet. The idea is to build a chat application that allows users to branch their conversation and keep track of it as their train of thought diverges. This was aimed to serve everybody's natural tendencies to branch conversations, and also ended up being useful for users with ADHD to keep track of their thoughts. This was my first attempt at helping create a more accessible internet and made me appreciate the vast differences in people's experiences while using technology. </span>
+            </div>
+            <div>
+                {% load static %}
+                <img class="project-card__image" src="{% static "images/chat.png" %}">
+            </div>
+        </div>
+
+        <div id="last-card" class="project-card slow-shadow">
+            <div class="project-card__info">
+                <span class="project-card__info__heading"> And more... </a></span>
+                <span class="project-card__underline"> </span>
+                <span class="project-card__body"> To learn about my other projects, please visit my <a class="custom_link" href="https://www.github.com/gopalanvinay/">GitHub Page! </a></span>
+            </div>
+            <div>
+                {% load static %}
+                <img class="project-card__image last__image" src="{% static "images/more.png" %}">
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block javascripts %}
+    {% load static %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static "js/projects.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/base.js" %}"></script>
+{% endblock javascripts %}

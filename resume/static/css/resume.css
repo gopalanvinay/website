@@ -1,0 +1,212 @@
+@import "base.css";
+@import "projects.css";
+
+
+.project-card{
+    margin: 2rem 16.6%;
+}
+
+.project-card__info{
+    margin: auto auto;
+}
+
+.project-banner {
+    margin-bottom: 0;
+}
+
+.resume__header {
+    margin: 10vw 16.6%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume__header__title {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+}
+
+.button {
+    background-color: #20A4F3;
+    border-radius: 12px;
+    color: #FFFFFF;
+    padding: 5px 20px;
+    border: none;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-width: 1px;
+    border-color: #20A4F3;
+    border-style: solid;
+    transition-duration: 0.5s;
+
+}
+
+#first-card {
+    margin-top: -75px;
+}
+
+.resume__position-time {
+    color: #20A4F3;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Merriweather', serif;
+    display: block;
+    padding: 5px 0px;
+}
+
+.resume__position-title {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: 'Merriweather', serif;
+    display: block;
+    padding: 5px 0px;
+}
+
+.resume__position-name {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family: 'Merriweather', serif;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.resume__position-location {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Merriweather', serif;
+    display: block;
+    padding-bottom: 50px;
+}
+
+.resume__position-body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 40px 40px;
+    display: block;
+    line-height: 1.5;
+}
+
+.skills-card {
+    background-color: #FFFFFF;
+    margin: 10vw 16.6%;
+}
+
+.skills-card__info {
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    margin: auto auto;
+    padding: 50px 50px;
+
+}
+
+.skills-card__title {
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    font-size: 1rem;
+    line-height: 2;
+    margin-top: 1rem;
+}
+
+
+.box {
+    width:10px;
+    height: 10px;
+    background-color: #20A4F3;
+    display: inline-block;
+    margin-right: 10px;
+}   
+
+.dot-padding {
+    margin-bottom: 5px;
+    margin-right: 5px; 
+}
+
+@media screen and (max-width: 1200px) {
+    .skills-grid {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .skills-grid {
+        font-size: 0.8rem;
+    }
+
+    .project-card {
+        margin: 2rem 5%;
+    }
+
+    .skills-card {
+        margin: 10vw 5%;
+    }
+
+    .resume__header {
+        margin: 10vw 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .resume__header__title {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .resume__header__title {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+    }
+
+    .resume__header {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .project-card__info {
+        padding-top: 50%;
+    }
+
+    .resume__header{
+        padding-bottom: 3rem;
+    }
+
+    .resume__header__title {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%;
+        line-height: 2.5;
+    }
+
+    .skills-card__title {
+        text-align: center;
+    }
+}

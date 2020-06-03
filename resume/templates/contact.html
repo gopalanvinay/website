@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block stylesheets %}
+    {%load static %}
+    <link rel="stylesheet" href="{% static "css/contact.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+{% endblock stylesheets %}
+
+{% block content %}
+    {% if name %}
+
+        <div class="scene_element scene_element--fadein">
+            <div class="success__banner">
+                <span class="project__header"> Thanks for the email, {{ name }}! I'll get back to you soon. </span>
+            </div>
+        </div>
+
+    {% else %}
+        {% if fail %}
+
+        <div class="scene_element scene_element--fadein">
+            <div class="project__banner">
+                <span class="project__header"> Sorry, something went wrong. Try again? </span>
+            </div>
+        </div>
+
+        {% endif %}
+
+            
+            <div class="scene_element scene_element--fadeinup">
+                {% if not fail %}
+                <div class="project__banner">
+                    <span class="dot dot-padding"></span>
+                    <span class="project__header"> Let's Talk </span>
+                </div>
+                {% endif %}
+                
+                <div class="contact-form slow-shadow">
+                    <div class="contact-form__items">
+                        <form action="/contact" method="POST">
+                            {% csrf_token %}  
+                            <div class="contact-form__grid">
+                                <div class="grid-item">
+                                    <label for="name" class="required">Name:</label><br>
+                                    <input class="contact-form__grid-input" type="text" id="name" name="name" required><br>
+                                </div>
+                                <div class="grid-item">
+                                    <label for="email" class="required">Email:</label><br>
+                                    <input class="contact-form__grid-input" type="text" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="contact-form__grid">
+                                <div class="grid-item">
+                                    <label for="email">Subject:</label><br>
+                                    <input class="contact-form__subject" type="text" id="subject" name="subject">
+                                </div> 
+                            </div>
+                            <div class="contact-form__grid">
+                                <div class="grid-item">
+                                    <label for="email">Message:</label><br>
+                                    <textarea id="message" name="message" class="contact-form__message"></textarea>
+                                </div> 
+                            </div>
+                            <div class="contact-form__submit">
+                                <input type="submit" class="submit-button" value="SEND">
+                            </div>
+                            <div class="contact-form__bottom;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+{% endblock content %}
+
+{% block javascripts %}
+    {% load static %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static "js/projects.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/base.js" %}"></script>
+{% endblock javascripts %}

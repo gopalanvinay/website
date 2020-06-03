@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block stylesheets %}
+    {%load static %}
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="about__container scene_element scene_element--fadeinup">
+        <div class="about__face-wrapper">
+            {% load static %}
+            <div class="about__face"><img src="{% static "images/face.jpg" %}" class="about__image"></div>
+            <span class="about__face__header"> Vinay Gopalan </span>
+            <span class="about__face__underline"> </span>
+            <span class="about__face__body"> Software Developer &amp; NLP Researcher </span>
+        </div>
+
+        <div class="about__info">
+            <div class="info__body">  
+                <span class="info__greeting"> Hello. </span>
+                <span class="info__tagline"> My name is Vinay. I am a software developer, Natural Language Processing (NLP) researcher and technology enthusiast. </span>
+                <span class="info__buttons"> 
+                    <a href="/resume"><button class="button">  R&eacute;sum&eacute; </button></a>
+                    <a href="/projects"><button class="button"> Projects </button></a>
+                </span>
+                <span class="info__text">
+                    I recently obtained a B.A. in Computer Science from Reed College, and am currently living in Portland, Oregon. I make useful applications for various platforms &mdash; I have experience building web applicaions and developing video games, and I recently designed a <a class="custom_link" href="https://www.github.com/gopalanvinay/thesis-vinay-gopalan">neural network system</a> as part of my <a href="/download?filename=thesis" target="_blank"class="custom_link">senior year thesis</a>. The neural network stood 4th in <a class="custom_link" href="https://competitions.codalab.org/competitions/20654">Task 9</a> of <a class="custom_link" href="http://alt.qcri.org/semeval2020/">SemEval 2020</a>. 
+                    <br>
+                    <br>
+                    My hobbies are reading, playing video games and listening to music. I enjoy playing the guitar as well as the tabla. I am always keen on expanding my knowledge by working on new technologies, so if you think my skills are useful to you, <a href="/contact" class="custom_link">email me!</a> 
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+{% block javascripts %}
+    {% load static %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static "js/base.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/home.js" %}"></script>
+{% endblock javascripts %}

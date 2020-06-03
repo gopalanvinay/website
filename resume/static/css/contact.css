@@ -1,0 +1,105 @@
+@import "base.css";
+@import "projects.css";
+
+.contact-form {
+    background-color: #FFFFFF;
+    margin: 100px 16.6%;
+}
+
+.contact-form__items {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 100px auto;
+}
+
+.contact-form__grid {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px auto;
+}
+
+.grid-item {
+    width: 100%;
+    margin: auto auto;
+    padding: 50px 50px;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
+
+.contact-form__grid-input {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.contact-form__subject {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px
+}
+
+.contact-form__message {
+    width: 100%;
+    height: 100px   ;
+    margin-top: 20px
+}
+
+input, textarea {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border-bottom: 2px solid #20A4F3;
+    outline: none;
+}
+
+.contact-form__submit {
+    padding-bottom: 100px;
+}
+.submit-button {
+    background-color: #20A4F3;
+    border-radius: 12px;
+    color: #FFFFFF;
+    padding: 5px 20px;
+    border: none;
+    margin-right: 50px;
+    font-size: 18px;
+    float: right;
+}
+.submit-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-width: 1px;
+    border-color: #20A4F3;
+    border-style: solid;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.contact-form__bottom {
+    clear: both;
+}
+
+.dot-padding {
+    margin-bottom: 5px;
+    margin-right: 5px; 
+}
+
+.success__banner {
+    text-align: center;
+    margin: 15% auto;
+}
+
+@media screen and (max-width:1024px) {
+    .contact-form {
+        margin: 2rem 5%;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .contact-form__items {
+        font-size: 1rem;
+    }
+}

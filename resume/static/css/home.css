@@ -1,0 +1,179 @@
+@import "base.css";
+
+#content-wrap {
+    margin-top: 1vw;
+}
+
+.about__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    font-family:'Roboto', sans-serif;
+    padding-bottom: 10%;
+}
+
+.about__face-wrapper {
+    align-items: center;
+}
+
+.about__face {
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about__face__header {
+    display: block;
+    font-size: 25px;
+    text-align: center;
+}
+
+.about__face__underline:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 1rem; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+    margin-bottom: 1rem;
+}
+
+
+.about__face__body {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 5vw;
+}
+
+.about__image {
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info__body {
+    padding-top: 10vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+
+.info__greeting {
+    display: block;
+    font-size: 80px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+
+.info__greeting span {
+    opacity: 0;
+    transition: all 1.5s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+.info__greeting span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.info__tagline {
+    display: block;
+    font-size: 25px;
+    font-weight: 300;
+    padding-bottom: 40px;
+}
+
+.info__buttons {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding-bottom: 50px;
+    display: block;
+}
+
+.info__text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.button {
+    background-color: rgba(251, 243, 251, 0.85);;
+    border-radius: 12px;
+    border-style: solid;
+    color: #000000;
+    padding: 5px 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    border-width: 1px;
+}
+
+.button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-width: 1px;
+    border-color: #20A4F3;
+    border-style: solid;
+    transition-duration: 0.5s;
+
+}
+
+/* .button2 {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border-width: 1px;
+    color: #000000;
+    padding: 5px 20px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.button2:hover {
+    background-color: #20A4F3;
+    color: #FFFFFF;
+    transition-duration: 0.5s;
+} */
+
+.custom_link {
+    color: #20A4F3;
+}
+
+.custom_link:hover {
+    color: #000000;
+}
+
+@media all and (max-width: 1024px) {
+    .about__container {
+        display: block;
+    }
+
+    .about__face-wrapper {
+        display: none;
+    }
+
+    .info__body {
+        margin-left: 2rem;
+        margin-top: 2rem;
+        padding-right: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    .info__greeting {
+        font-size: 3rem;
+    }
+
+    .info__tagline {
+        font-size: 1rem;
+    }
+
+    .info__text {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+}
