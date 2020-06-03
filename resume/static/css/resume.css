@@ -209,4 +209,8 @@
     .skills-card__title {
         text-align: center;
     }
+
+    .resume__image-mobile {
+        display: none;
+    }
 }
